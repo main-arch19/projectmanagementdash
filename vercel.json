@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "installCommand": "npm install",
+  "buildCommand": "npm run build --workspace=packages/types && npm run build --workspace=server",
+  "framework": null
+}
