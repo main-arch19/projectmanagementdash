@@ -21,7 +21,7 @@ app.use(express.json());
 const API = '/api/v1';
 
 if (isDemoMode) {
-  console.log('⚠️  Running in DEMO MODE — no Supabase credentials detected');
+  console.log('⚠️  Running in DEMO MODE — connect Supabase to enable live data');
   app.use(API, demoRouter);
 } else {
   // TODO Phase 2: add Supabase JWT auth middleware here before routes
