@@ -1,7 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "npm run build -w @delroy/types",
+  "buildCommand": "npm run build -w @delroy/types && npm run build -w client",
+  "outputDirectory": "client/dist",
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.ts" }
+    { "src": "/api/(.*)", "dest": "/api/index.ts" },
+    { "src": "/health", "dest": "/api/index.ts" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
