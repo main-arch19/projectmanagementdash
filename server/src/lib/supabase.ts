@@ -6,7 +6,8 @@ const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 export const isDemoMode = !url || !key;
 
-export const supabase = (isDemoMode
-  ? null
-  : createClient(url!, key!, { auth: { persistSession: false } })
-) as ReturnType<typeof createClient>;
+export const supabase = createClient(
+  url ?? 'https://placeholder.supabase.co',
+  key ?? 'placeholder-key',
+  { auth: { persistSession: false } }
+);
