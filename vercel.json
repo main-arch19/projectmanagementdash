@@ -1,6 +1,6 @@
 {
   "version": 2,
   "installCommand": "npm install",
-  "buildCommand": "npm run build --workspace=packages/types && npm run build --workspace=server",
+  "buildCommand": "npm run build -w @delroy/types && npm run build -w server",
   "framework": null
 }
