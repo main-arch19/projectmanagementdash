@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "installCommand": "npm install",
-  "buildCommand": "npm run build -w @delroy/types && npm run build -w server",
-  "framework": null
+  "buildCommand": "npm run build -w @delroy/types",
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.ts" }
+  ]
 }
